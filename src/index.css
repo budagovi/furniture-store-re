@@ -1,3 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --main-padding-sides: 3rem;
+  --yellow: #fbd84b;
+}
+
+h1 {font-size: clamp(20px,6.6vw,72px)}
+h2 {font-size: 55px}
+h3 {font-size: clamp(18px,3.8vw,45px); margin: 0.3rem; text-align: center;}
+h4 {font-size: 35px}
+h5 {font-size: 24px}
+h6 {font-size: 20px}
+
+span.preTitle {
+    font-size: clamp(9px,1.5vw,14px);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+a.lined {
+  text-decoration: none;
+  margin-bottom: 2px;
+  line-height: 1.4em;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  transition: .4s ease;
+  padding-bottom: 3px;
+  line-height: 1.5rem;
+}
+
+a.yellowLine {
+  border-bottom: 1px solid var(--yellow);
+}
+
+a.lined:hover {
+  border-bottom: 1px solid black;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -1,0 +1,14 @@
+:root {
+  --page-button-size: 40px
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--page-button-size);
+  height: var(--page-button-size);
+  background-color: #8b8698;
+  color: black;
+  border: 1px solid #8b8698
+}

@@ -1,0 +1,13 @@
+.wrapper {
+  display: grid;
+  grid-template-columns:  2fr 3fr;
+  gap: 1rem 4rem;
+  margin: 2rem 0;
+}
+
+.wrapper > section {
+  height: 1px;
+  background-color: var(--yellow);
+  width: 60px;
+  margin: auto 0;
+}

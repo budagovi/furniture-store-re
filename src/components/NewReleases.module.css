@@ -1,0 +1,20 @@
+.wrapper {
+  border-top: 1px solid #929292cd;
+  border-bottom: 1px solid #929292cd;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.wrapper a {
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}

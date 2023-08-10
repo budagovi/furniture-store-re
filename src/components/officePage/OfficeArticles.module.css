@@ -1,0 +1,12 @@
+.wrapper {
+  text-align: center;
+}
+
+.wrapper h3::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: #fbd84b;
+  margin: 0.7em auto;
+}

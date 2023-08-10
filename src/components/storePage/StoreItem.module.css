@@ -1,0 +1,23 @@
+.wrapper {
+  width: 100%;
+  text-align: start;
+}
+
+.wrapper img{
+  width: 100%;
+}
+
+.textHolder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em 1.5em;
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+}
+
+.textHolder span:nth-of-type(2) {
+  color: #a8a8a8;
+  font-size: 14px;
+}

@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  padding: 2em 0;
+  position: relative;
+  gap: 3rem;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.offer span:nth-of-type(1) {
+  margin: 0.4rem 0;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.offer span:nth-of-type(2) {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4rem;
+  color: #adadad;
+}
+
+.wrapper svg {
+  height: 30px;
+  color: #fbd84b;
+}

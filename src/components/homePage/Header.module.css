@@ -1,0 +1,40 @@
+.wrapper {
+  width: 100%;
+  background-image: url(../../assets/homeBackground.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: #2922317b;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: none;
+  padding: clamp(4rem, 7.7vw, 7rem) min(3rem, 3.6vw);
+}
+
+.textHolder {
+  max-width: 1000px;
+  font-weight: 700;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    height: 100vh;
+  }
+  
+  .background {
+    height: 100vh;
+    padding-inline: max(3rem, 3.6vw);
+    justify-content: center;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  
+}

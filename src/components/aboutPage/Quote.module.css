@@ -1,0 +1,28 @@
+.wrapper {
+  color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10rem;
+  text-align: center;
+}
+
+.wrapper h4{
+  color: #8B8698;
+  line-height: 2.4rem;
+}
+
+.profiler {
+  display: flex;
+  gap: 1rem;
+  color: #8B8698;
+}
+
+.profiler img {
+  border-radius: 50%;
+}
+.textHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

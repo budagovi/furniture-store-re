@@ -1,0 +1,62 @@
+.grid {
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+    "product1 product1 product2"
+    "product1 product1 product3";
+}
+
+.product {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 2em;
+  box-shadow: 2px 2px 3px #cacaca;
+}
+
+.product a {
+  text-decoration: none;
+  margin-bottom: 2px;
+  line-height: 1.4em;
+  color: black;
+  font-weight: 700;
+  font-size: 22px;
+  transition: .2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.product a:hover {
+  border-bottom: 1px solid black;
+}
+
+.product1 {
+  background-image: url(../../assets/laptopStand.jpg);
+  grid-area: product1;
+}
+
+.product2 {
+  background-image: url(../../assets/woodenDesk.jpg);
+  grid-area: product2;
+}
+
+.product3 {
+  background-image: url(../../assets/products/p6.jpg);
+  grid-area: product3;
+}
+
+@media (max-width: 650px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .product {
+    padding: 6rem 0 2rem 2rem;
+  }
+}
