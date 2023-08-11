@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/furniture-store-react/static/css/main.b5c0621e.css",
+    "main.css": "/furniture-store-react/static/css/main.09bdfe93.css",
     "main.js": "/furniture-store-react/static/js/main.dad0050f.js",
     "static/js/755.f46985ec.chunk.js": "/furniture-store-react/static/js/755.f46985ec.chunk.js",
     "static/js/144.8e885900.chunk.js": "/furniture-store-react/static/js/144.8e885900.chunk.js",
@@ -77,11 +77,11 @@
     "static/media/computer-mouse.png": "/furniture-store-react/static/media/computer-mouse.01867d0330676b3a4964.png",
     "static/media/chair.png": "/furniture-store-react/static/media/chair.bb2e743d0b872d07b356.png",
     "index.html": "/furniture-store-react/index.html",
-    "main.b5c0621e.css.map": "/furniture-store-react/static/css/main.b5c0621e.css.map",
+    "main.09bdfe93.css.map": "/furniture-store-react/static/css/main.09bdfe93.css.map",
     "main.dad0050f.js.map": "/furniture-store-react/static/js/main.dad0050f.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5c0621e.css",
+    "static/css/main.09bdfe93.css",
     "static/js/main.dad0050f.js"
   ]
 }
