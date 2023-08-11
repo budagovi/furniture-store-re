@@ -1,28 +1,34 @@
 .wrapper {
   color: var(--yellow);
   display: flex;
+  padding: 0 var(--rem2-gap);
   flex-direction: column;
   align-items: center;
-  padding: 0 10rem;
   text-align: center;
 }
 
 .wrapper h4{
   color: #8B8698;
-  line-height: 2.4rem;
+  max-width: 450px;
+  line-height: clamp(1rem, 3.6vw, 2.4rem);
+  margin: var(--rem2-gap) 0 ;
 }
 
 .profiler {
   display: flex;
-  gap: 1rem;
+  gap: var(--rem1-gap);
   color: #8B8698;
+  align-items: center;
 }
 
 .profiler img {
   border-radius: 50%;
+  width: clamp(1.6rem, 5vw, 3rem);
+  height: clamp(1.6rem, 5vw, 3rem);
 }
 .textHolder {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: var(--px16-font);
 }

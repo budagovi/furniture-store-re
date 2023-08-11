@@ -5,7 +5,7 @@
   justify-content: space-between;
   padding: 2em 0;
   position: relative;
-  gap: 3rem;
+  gap: var(--rem3-gap);
 }
 
 .offer {
@@ -17,17 +17,18 @@
 .offer span:nth-of-type(1) {
   margin: 0.4rem 0;
   font-weight: 700;
-  font-size: 20px;
+  font-size: var(--px20-font);
 }
 
 .offer span:nth-of-type(2) {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4rem;
+  font-size: var(--px16-font);
+  line-height: clamp(0.7rem, 2vw, 1.4rem);
   color: #adadad;
 }
 
 .wrapper svg {
-  height: 30px;
+  height: clamp(14px, 2vw, 30px);
+  width: clamp(18px, 2vw, 30px);
   color: #fbd84b;
 }

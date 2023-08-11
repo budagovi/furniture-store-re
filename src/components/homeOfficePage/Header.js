@@ -1,8 +1,9 @@
-import style from './Header.module.css';
+import style from '../../Layout/Header.module.css';
+import image from '../../assets/homeOfficeBackground.jpg'
 
-const OfficeHeader = () => {
+const Header = () => {
   return (
-    <header className={style.wrapper}>
+    <header className={style.wrapper} style={{backgroundImage: 'url('+ image +')'}}>
       <div id='background' className={style.background}>
         <div className={style.textHolder}>
           <h1>Office Setups</h1>
@@ -13,4 +14,4 @@ const OfficeHeader = () => {
   )
 }
 
-export default OfficeHeader;
+export default Header;

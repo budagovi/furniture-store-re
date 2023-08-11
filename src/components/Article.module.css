@@ -16,6 +16,10 @@
   width: 100%;
 }
 
+.wrapper img + span {
+  margin: 0 0 0.5rem;
+}
+
 .description {
   color: #a3a3a3;
   line-height: 1.3rem;
@@ -34,9 +38,22 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: clamp(1rem, 2.5vw, 3rem);
+}
+
+.grid img {
+  width: 100%;
 }
 
 .grid .wrapper {
-  width: 80%;
+  max-width: 550px;
+}
+
+@media (max-width: 750px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rem1dot5-gap);
+  }
+  
 }

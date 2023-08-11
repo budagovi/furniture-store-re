@@ -6,7 +6,7 @@ const Offers = () => {
     <div className={style.wrapper}>
       <div className={style.offer}>
         <CalculatorIcon />
-        <span>Perfect Precision</span>
+        <span>Precision</span>
         <span>Egestas at faucibus neque leo ac quisque ligula ultricies euismod platea mauris.</span>
       </div>
       <div className={style.offer}>

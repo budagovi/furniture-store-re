@@ -1,8 +1,9 @@
-import style from './Header.module.css';
+import style from '../../Layout/Header.module.css';
+import image from '../../assets/officeBackground.jpg';
 
 const OfficeHeader = () => {
   return (
-    <header className={style.wrapper}>
+    <header className={style.wrapper} style={{backgroundImage: 'url('+ image +')'}}>
       <div id='background' className={style.background}>
         <div className={style.textHolder}>
           <h1>Office Setups</h1>

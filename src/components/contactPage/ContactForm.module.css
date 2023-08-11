@@ -1,7 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--rem1dot5-gap);
 }
 
 .inputWrapper {
@@ -9,6 +9,7 @@
   flex-direction: column;
   color: #8f8f8f;
   font-weight: 700;
+  font-size: var(--px16-font);
 }
 
 .form label::after {
@@ -20,8 +21,8 @@
   border: 1px solid #c8c8c8;
   border-radius: 4px;
   line-height: 1.5rem;
-  font-size: 18px;
-  padding: 0.3rem;
+  font-size: var(--px18-font);
+  padding: clamp(0.1rem, 1vw, 0.3rem);
 }
 
 .form button {

@@ -30,7 +30,7 @@ h2 {font-size: 55px}
 h3 {font-size: clamp(19px,3.8vw,45px)}
 h4 {font-size: clamp(18px,3.5vw,35px)}
 h5 {font-size: clamp(16px, 2.7vw, 24px);}
-h6 {font-size: 20px}
+h6 {font-size: clamp(14px, 2.3vw, 22px);}
 
 span.preTitle {
     font-size: clamp(9px,1.5vw,14px);
@@ -56,6 +56,14 @@ a.yellowLine {
 
 a.lined:hover {
   border-bottom: 1px solid black;
+}
+
+.afterLine::after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 1px;
+  background-color: #fbd84b;
 }
 
 body {
