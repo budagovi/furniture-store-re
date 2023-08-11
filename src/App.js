@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage />, loader: articlesLoader, id: 'home' },
       { path: 'store', element: <StorePage />, children: [
         {path: ':page', element: <StorePage />},
-        {path: ':category/page', element: <StorePage />}
+        {path: ':category/:page', element: <StorePage />}
       ]},
       { path: 'office-setups', element: <OfficePage />, loader: officeArticlesloader },
       { path: 'home-office-setups', element: <HomeOfficePage />, loader: homeOfficeArticlesloader },

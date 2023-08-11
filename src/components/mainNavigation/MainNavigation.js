@@ -24,8 +24,6 @@ const MainNavigation = () => {
   if (flag) classes = `${style.navWrapper} ${style.absolute}`
 
   const sideMenuHandler = (e) => {
-    console.log('menu button clicked');
-    console.dir(e);
     setSideNav(prevState => !prevState);
   }
 

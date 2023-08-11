@@ -9,15 +9,20 @@ import { useEffect, useState } from 'react';
 const StoreContent = () => {
 
   const currPage = useParams().page;
+  const currCategory = useParams().category;
   const [page, setPage] = useState(currPage ? currPage : 1);
+  const [category, setCategory] = useState(currCategory ? currCategory : '');
 
   useEffect(() => {
    setPage(currPage ? currPage : 1) 
+   setCategory(currCategory ? currCategory : '');
    window.scrollTo(0, 0);
-  }, currPage)
+  }, [currPage, currCategory])
 
   const products = useRouteLoaderData('root');
-  const pageProducts = products.slice(12*(page-1), 12*page);
+  const pageProducts = products
+  .filter(item => category ? item.category === category : item)
+  .slice(12*(page-1), 12*page);
 
   const pages = [];
   let i = Math.floor(products.length / 12);

@@ -1,10 +1,10 @@
-import style from './SideNavigation.module.css';
-import { NavLink } from 'react-router-dom';
+import style from './StoreFilter.module.css';
+import { Link } from 'react-router-dom';
 import { Logo } from '../../assets/Icons';
-import NavSearchForm from './NavSearchForm';
+import NavSearchForm from '../mainNavigation/NavSearchForm';
 import { useEffect, useState } from 'react';
 
-const SideNavigation = ({ flag, onBlurClick }) => {
+const StoreFilter = ({ flag, onBlurClick }) => {
 
   const [wrapperClasses, setWrapperClasses] = useState(style.wrapper);
   const [listClasses, setListClasses] = useState(style.list);
@@ -32,50 +32,57 @@ const SideNavigation = ({ flag, onBlurClick }) => {
   return (
     <div className={wrapperClasses}>
       <ul className={listClasses}>
-        <li className={style.logoLink}>
-          <NavLink 
-            to='/furniture-store-react'
-            onClick={navigateHandler}>
-            <Logo color='black'/>
-          </NavLink>
-        </li>
         <li>
           <NavSearchForm />
         </li>
-        <li className={style.linkText}>
-          <NavLink
-            to='/furniture-store-react/store'
+        <li className={style.logoLink}>
+          <Link 
+            to='cabinets/1'
             onClick={navigateHandler}>
-            Store
-          </NavLink>
+            Cabinets
+          </Link>
         </li>
         <li className={style.linkText}>
-          <NavLink 
-            to='/furniture-store-react/office-setups' 
+          <Link
+            to='chairs/1'
             onClick={navigateHandler}>
-            Office
-          </NavLink>
+            Chairs
+          </Link>
         </li>
         <li className={style.linkText}>
-          <NavLink
-            to='/furniture-store-react/home-office-setups' 
+          <Link 
+            to='monitor-stands/1' 
             onClick={navigateHandler}>
-            Home Office
-          </NavLink>
+            Monitor Stands
+          </Link>
         </li>
         <li className={style.linkText}>
-          <NavLink 
-            to='/furniture-store-react/about' 
+          <Link
+            to='desk-plants/1' 
             onClick={navigateHandler}>
-            About
-          </NavLink>
+            Desk Plants
+          </Link>
         </li>
         <li className={style.linkText}>
-          <NavLink 
-            to='/furniture-store-react/contact'
+          <Link 
+            to='study-lamps/1' 
             onClick={navigateHandler}>
-            Contact
-          </NavLink>
+            Study Lamps
+          </Link>
+        </li>
+        <li className={style.linkText}>
+          <Link 
+            to='mouse-pads/1'
+            onClick={navigateHandler}>
+            Mouse Pads
+          </Link>
+        </li>
+        <li>
+          <Link 
+            to='tables/1'
+            onClick={navigateHandler}>
+            Tables
+          </Link>
         </li>
       </ul>
       <div className={style.blur} onClick={sideNavHandler}></div>
@@ -83,4 +90,4 @@ const SideNavigation = ({ flag, onBlurClick }) => {
   )
 }
 
-export default SideNavigation;
+export default StoreFilter;

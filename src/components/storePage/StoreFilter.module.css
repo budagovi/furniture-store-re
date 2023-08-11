@@ -46,6 +46,8 @@
   width: 100%;
   display: inline-block;
   padding: var(--px14-font) 0;
+  text-decoration: none;
+  color: inherit;
 }
 
 .wrapper .list form button svg {
@@ -81,14 +83,6 @@
   }
 }
 
-@media (min-width: 700px) {
-  .wrapper .list form {
-    display: none;
-  }
-}
-
-@media (max-width: 700px) {
-  .list li:nth-of-type(2) {
-    border-bottom: none;
-  }
+.wrapper .list form button{
+  padding: var(--rem1-gap) 6px;
 }

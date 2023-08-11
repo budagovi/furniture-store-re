@@ -25,7 +25,11 @@
 .filter {
   display: flex;
   align-items: center;
-  gap: var(--remdot5-gap)
+  gap: var(--remdot5-gap);
+}
+
+.filter:hover {
+  cursor: pointer;
 }
 
 .filter > span {
