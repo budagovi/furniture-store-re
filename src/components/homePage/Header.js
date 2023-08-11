@@ -5,7 +5,7 @@ const HomeHeader = () => {
   return (
     <header className={style.wrapper}>
       <div id='background' className={style.background}>
-      <div className={style.textHolder}>
+        <div className={style.textHolder}>
           <span className='preTitle'>HOME OFFICE  FURNITURE</span>
           <h1>Stay productive and get more work done!</h1>
           <Button>

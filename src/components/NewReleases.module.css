@@ -1,6 +1,11 @@
 .wrapper {
   border-top: 1px solid #929292cd;
   border-bottom: 1px solid #929292cd;
+  padding: clamp(0.5rem, 1vw, 1rem) 0;
+}
+
+.wrapper h4 {
+  margin: clamp(0.5rem, 3vw, 2.5rem) 0;
 }
 .actions {
   display: flex;
@@ -8,13 +13,14 @@
   align-items: center;
 }
 
-
-.wrapper a {
-  font-size: 14px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+
+@media (max-width: 780px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

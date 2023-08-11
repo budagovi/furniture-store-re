@@ -1,5 +1,12 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper h3 {
   text-align: center;
+  margin: 0.3rem;
 }
 
 .wrapper h3::after {

@@ -12,7 +12,7 @@ const StoreContent = () => {
 
   return (
     <div className={style.wrapper}>
-      <span>Home/Shop</span>
+      <span>Home / Shop</span>
       <h1>Shop</h1>
       <div className={style.actions}>
         <div className={style.filter}>

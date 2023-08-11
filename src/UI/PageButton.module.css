@@ -1,5 +1,5 @@
 :root {
-  --page-button-size: 40px
+  --page-button-size: clamp(22px,3.8vw,40px)
 }
 
 .btn {
@@ -8,6 +8,7 @@
   align-items: center;
   width: var(--page-button-size);
   height: var(--page-button-size);
+  font-size: var(--px16-font);
   background-color: #8b8698;
   color: black;
   border: 1px solid #8b8698

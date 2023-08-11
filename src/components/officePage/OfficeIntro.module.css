@@ -8,13 +8,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
+  gap: var(--rem2-gap);
+}
+
+.textHolder > span {
+  font-size: var(--px16-font);
 }
 
 .wrapper h3 {
   margin: 0;
-}
-
-.textHolder a {
-  font-size: 14px;
 }
