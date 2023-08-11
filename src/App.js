@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route, useLocation } from "react-router-dom";
 
 
 //Page Elements
@@ -12,7 +12,7 @@ import ContactPage from "./pages/Contact";
 
 const router = createBrowserRouter([
   {
-    path: '/', element: <RootPage />, id: 'root', loader: fetchProductsLoader, children: [
+    path: '/furniture-store-react', element: <RootPage />, id: 'root', loader: fetchProductsLoader, children: [
       { index: true, element: <HomePage />, loader: articlesLoader, id: 'home' },
       { path: 'store', element: <StorePage /> },
       { path: 'office-setups', element: <OfficePage />, loader: officeArticlesloader },
@@ -22,6 +22,7 @@ const router = createBrowserRouter([
     ]
   },
 ])
+
 
 function App() {
   return (

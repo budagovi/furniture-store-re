@@ -9,7 +9,7 @@ const Articles = () => {
 
   return (
     <div className={style.wrapper}>
-      <span>WORK FROM HOME</span>
+      <span className='preTitle'>WORK FROM HOME</span>
       <ArticlesGrid>
         <div className={style.spanHolder}>
           <h3>Keep inspired & motivated</h3>

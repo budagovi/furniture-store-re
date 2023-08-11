@@ -2,8 +2,8 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5em;
-  margin: 3.5rem 0;
+  gap: var(--rem1dot5-gap);
+  margin: var(--rem3-gap) 0;
 }
 
 @media (max-width: 600px) {

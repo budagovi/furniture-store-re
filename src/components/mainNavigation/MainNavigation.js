@@ -23,27 +23,27 @@ const MainNavigation = () => {
     <nav className={classes}>
       <ul className={style.list}>
         <li className={style.logoLink}>
-          <NavLink to='/'>
+          <NavLink to='/furniture-store-react'>
             <Logo color={flag ? '' : 'black'}/>
           </NavLink>
         </li>
         <li className={style.linkText}>
-          <NavLink to='/store'>Store</NavLink>
+          <NavLink to='/furniture-store-react/store'>Store</NavLink>
         </li>
         <li className={style.linkText}>
-          <NavLink to='/office-setups'>Office</NavLink>
+          <NavLink to='/furniture-store-react/office-setups'>Office</NavLink>
         </li>
         <li className={style.linkText}>
-          <NavLink to='/home-office-setups'>Home Office</NavLink>
+          <NavLink to='/furniture-store-react/home-office-setups'>Home Office</NavLink>
         </li>
       </ul>
       <div className={style.actions}>
         <ul className={style.list}>
           <li className={style.linkText}>
-            <NavLink to='/about'>About</NavLink>
+            <NavLink to='/furniture-store-react/about'>About</NavLink>
           </li>
           <li className={style.linkText}>
-            <NavLink to='/contact'>Contact</NavLink>
+            <NavLink to='/furniture-store-react/contact'>Contact</NavLink>
           </li>
           <li>
             <NavSearchForm />

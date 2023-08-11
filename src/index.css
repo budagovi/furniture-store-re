@@ -10,13 +10,25 @@
 :root {
   --main-padding-sides: 3rem;
   --yellow: #fbd84b;
+
+  --px12-font: clamp(9px, 2vw, 12px);
+  --px14-font: clamp(10px, 2.1vw, 14px);
+  --px16-font: clamp(10px, 2.2vw, 16px);
+  --px18-font: clamp(12px, 2.5vw, 18px);
+  --px20-font: clamp(14px, 2.7vw, 20px);
+  --px22-font: clamp(16px, 3.5vw, 22px);
+  
+  --rem1-gap: clamp(4px, 1vw, 1rem);
+  --rem1dot5-gap: clamp(7px, 1.3vw, 1.5rem);
+  --rem2-gap: clamp(8px, 3.5vw, 2rem);
+  --rem3-gap: clamp(1rem, 4.5vw, 3rem);
 }
 
 h1 {font-size: clamp(20px,6.6vw,72px)}
 h2 {font-size: 55px}
 h3 {font-size: clamp(18px,3.8vw,45px); margin: 0.3rem; text-align: center;}
 h4 {font-size: 35px}
-h5 {font-size: 24px}
+h5 {font-size: clamp(16px, 2.7vw, 24px);}
 h6 {font-size: 20px}
 
 span.preTitle {
@@ -31,9 +43,9 @@ a.lined {
   line-height: 1.4em;
   color: black;
   font-weight: 700;
-  font-size: 16px;
+  font-size: var(--px16-font);
   transition: .4s ease;
-  padding-bottom: 3px;
+  padding-bottom: min(0.35vw, 3px);
   line-height: 1.5rem;
 }
 
