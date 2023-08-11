@@ -1,11 +1,8 @@
 import style from './PageButton.module.css';
 
-const PageButton = ({text}) => {
-
-  const arrow= <span>&rarr;</span>
-  
+const PageButton = ({children, onClick}) => {
   return (
-    <button className={style.btn}>{text ? text : arrow}</button>
+    <button className={style.btn} onClick={onClick}>{children}</button>
   )
 }
 

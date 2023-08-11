@@ -22,7 +22,7 @@ const SideNavigation = ({ flag, onBlurClick }) => {
     setTimeout(() => {
       setWrapperClasses(style.wrapper);
       onBlurClick();
-    }, 600);
+    }, 400);
   }
 
   const navigateHandler = () => {

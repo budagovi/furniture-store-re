@@ -6,6 +6,10 @@
   margin: var(--rem2-gap) 0;
 }
 
+.grid > span {
+  font-size: var(--px22-font);
+}
+
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
