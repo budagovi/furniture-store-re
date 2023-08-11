@@ -14,9 +14,3 @@
 .wrapper svg {
   margin-inline: -2rem;
 }
-
-@media (max-width: 700px) {
-  .wrapper {
-    display: none;
-  }
-}

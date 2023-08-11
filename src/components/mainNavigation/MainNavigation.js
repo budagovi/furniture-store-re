@@ -3,28 +3,39 @@ import { Logo, CartIcon, PersonIcon, MenuIcon } from '../../assets/Icons';
 import NavSearchForm from './NavSearchForm';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import SideNavigation from './SideNavigation';
 
 const MainNavigation = () => {
 
-  const {pathname} = useLocation();
-  const [flag, setFlag] = useState()
-  
+  const { pathname } = useLocation();
+  const [flag, setFlag] = useState();
+  const [sideNav, setSideNav] = useState(false);
+
   useEffect(() => {
-    if(document.getElementById('background'))
+    if (document.getElementById('background'))
       setFlag(true)
     else
       setFlag(false)
+
+    if(sideNav) setSideNav(false);
   }, [pathname])
 
   let classes = style.navWrapper;
-  if(flag) classes = `${style.navWrapper} ${style.absolute}`
+  if (flag) classes = `${style.navWrapper} ${style.absolute}`
+
+  const sideMenuHandler = (e) => {
+    console.log('menu button clicked');
+    console.dir(e);
+    setSideNav(prevState => !prevState);
+  }
 
   return (
     <nav className={classes}>
+      <SideNavigation flag={sideNav} onBlurClick={sideMenuHandler}/>
       <ul className={style.list}>
         <li className={style.logoLink}>
           <NavLink to='/furniture-store-react'>
-            <Logo color={flag ? '' : 'black'}/>
+            <Logo color={flag ? '' : 'black'} />
           </NavLink>
         </li>
         <li className={style.linkText}>
@@ -54,8 +65,12 @@ const MainNavigation = () => {
               <div className={style.counter}>999</div>
             </div>
           </li>
-          <li><PersonIcon /></li>
-          <li className={style.menu}><MenuIcon /></li>
+          <li>
+            <PersonIcon />
+          </li>
+          <li className={style.menu}>
+            <MenuIcon onClick={sideMenuHandler}/>
+          </li>
         </ul>
       </div>
 
