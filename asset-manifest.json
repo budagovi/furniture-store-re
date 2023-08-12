@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/furniture-store-react/static/css/main.09bdfe93.css",
-    "main.js": "/furniture-store-react/static/js/main.dad0050f.js",
+    "main.css": "/furniture-store-react/static/css/main.da5b928e.css",
+    "main.js": "/furniture-store-react/static/js/main.eeb4a936.js",
     "static/js/755.f46985ec.chunk.js": "/furniture-store-react/static/js/755.f46985ec.chunk.js",
     "static/js/144.8e885900.chunk.js": "/furniture-store-react/static/js/144.8e885900.chunk.js",
     "static/js/850.00fb5712.chunk.js": "/furniture-store-react/static/js/850.00fb5712.chunk.js",
@@ -29,6 +29,12 @@
     "static/js/55.69125bf6.chunk.js": "/furniture-store-react/static/js/55.69125bf6.chunk.js",
     "static/js/486.b5c17da1.chunk.js": "/furniture-store-react/static/js/486.b5c17da1.chunk.js",
     "static/js/25.8fcc2e03.chunk.js": "/furniture-store-react/static/js/25.8fcc2e03.chunk.js",
+    "static/js/171.c6600de2.chunk.js": "/furniture-store-react/static/js/171.c6600de2.chunk.js",
+    "static/js/991.8b3ec66b.chunk.js": "/furniture-store-react/static/js/991.8b3ec66b.chunk.js",
+    "static/js/283.888cd3f5.chunk.js": "/furniture-store-react/static/js/283.888cd3f5.chunk.js",
+    "static/js/512.27491992.chunk.js": "/furniture-store-react/static/js/512.27491992.chunk.js",
+    "static/js/566.7a84bc2a.chunk.js": "/furniture-store-react/static/js/566.7a84bc2a.chunk.js",
+    "static/js/743.d6832527.chunk.js": "/furniture-store-react/static/js/743.d6832527.chunk.js",
     "static/media/aboutBackground.jpg": "/furniture-store-react/static/media/aboutBackground.36e3d5fea72cdac5ee70.jpg",
     "static/media/footerBackground.jpg": "/furniture-store-react/static/media/footerBackground.1bde6b70e93c8baeb92c.jpg",
     "static/media/woodenDesk.jpg": "/furniture-store-react/static/media/woodenDesk.46e48e32400bad51817a.jpg",
@@ -77,11 +83,11 @@
     "static/media/computer-mouse.png": "/furniture-store-react/static/media/computer-mouse.01867d0330676b3a4964.png",
     "static/media/chair.png": "/furniture-store-react/static/media/chair.bb2e743d0b872d07b356.png",
     "index.html": "/furniture-store-react/index.html",
-    "main.09bdfe93.css.map": "/furniture-store-react/static/css/main.09bdfe93.css.map",
-    "main.dad0050f.js.map": "/furniture-store-react/static/js/main.dad0050f.js.map"
+    "main.da5b928e.css.map": "/furniture-store-react/static/css/main.da5b928e.css.map",
+    "main.eeb4a936.js.map": "/furniture-store-react/static/js/main.eeb4a936.js.map"
   },
   "entrypoints": [
-    "static/css/main.09bdfe93.css",
-    "static/js/main.dad0050f.js"
+    "static/css/main.da5b928e.css",
+    "static/js/main.eeb4a936.js"
   ]
 }

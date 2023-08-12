@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfurniture_store=self.webpackChunkfurniture_store||[]).push([[566],{1566:function(e,t,s){e.exports=s.p+"static/media/pic5.dc421e5a5a35a86a79bf.jpg"}}]);
