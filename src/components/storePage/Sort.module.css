@@ -1,0 +1,49 @@
+:root {
+  --translate-arrow: clamp(15px, 2vw, 22px);
+}
+.grid {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem
+}
+
+.grid label {
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.grid select {
+  font-size: var(--px14-font);
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  background-color: transparent;
+  translate: var(--translate-arrow);
+  border: none;
+  padding-inline-end: 0;
+  padding: var(--remdot5-gap) 0;
+  padding-inline: 3px 25px;
+  border-radius: 3px;
+}
+
+.grid select:focus {
+  outline: none;
+}
+
+.grid select:hover {
+  outline: 1px solid #adadad;
+  cursor: pointer;
+}
+
+.grid label svg {
+  width: var(--translate-arrow);
+  height: var(--translate-arrow);
+}
+
+.grid > svg:hover {
+  color: #616161;
+  cursor: pointer;
+} 
+
+

@@ -9,7 +9,6 @@ import OfficePage, { loader as officeArticlesloader } from "./pages/Office";
 import HomeOfficePage, { loader as homeOfficeArticlesloader } from "./pages/HomeOffice";
 import AboutPage, {loader as photoLoader} from "./pages/About";
 import ContactPage from "./pages/Contact";
-import StoreContent from "./components/storePage/StoreContent";
 
 const router = createBrowserRouter([
   {

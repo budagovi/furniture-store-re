@@ -15,6 +15,7 @@
 .wrapper svg {
   width: var(--px22-font);
   height: var(--px22-font);
+  transition: .2s ease;
 }
 
 .wrapper h1{
@@ -26,10 +27,17 @@
   display: flex;
   align-items: center;
   gap: var(--remdot5-gap);
+  padding: var(--remdot5-gap) 5px;
+  border-radius: 3px;
 }
 
 .filter:hover {
   cursor: pointer;
+  outline: 1px solid #adadad;
+}
+
+.filter:hover svg {
+  color: #616161;
 }
 
 .filter > span {
@@ -41,14 +49,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.actions select {
-  font-size: var(--px14-font);
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  gap: var(--remdot5-gap)
 }

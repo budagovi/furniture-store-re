@@ -1,7 +1,7 @@
-import StoreActions from "../components/storePage/StoreActions";
+import Actions from "../components/storePage/Actions";
 
 const StorePage = () => {
-  return <StoreActions />
+  return <Actions />
 }
 
 export default StorePage;

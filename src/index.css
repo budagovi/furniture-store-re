@@ -7,6 +7,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   --main-padding-sides: 3rem;
   --yellow: #fbd84b;

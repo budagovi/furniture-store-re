@@ -1,10 +1,9 @@
-import style from './StoreFilter.module.css';
+import style from './Filter.module.css';
 import { Link } from 'react-router-dom';
-import { Logo } from '../../assets/Icons';
 import NavSearchForm from '../mainNavigation/NavSearchForm';
 import { useEffect, useState } from 'react';
 
-const StoreFilter = ({ flag, onBlurClick }) => {
+const Filter = ({ flag, onBlurClick }) => {
 
   const [wrapperClasses, setWrapperClasses] = useState(style.wrapper);
   const [listClasses, setListClasses] = useState(style.list);
@@ -24,9 +23,9 @@ const StoreFilter = ({ flag, onBlurClick }) => {
     }, 400);
   }
 
-  const navigateHandler = () => {
+  const navigateHandler = (e) => {
     setWrapperClasses(style.wrapper);
-    onBlurClick();
+    onBlurClick(e.target.textContent);
   }
 
   return (
@@ -34,6 +33,13 @@ const StoreFilter = ({ flag, onBlurClick }) => {
       <ul className={listClasses}>
         <li>
           <NavSearchForm />
+        </li>
+        <li className={style.logoLink}>
+          <Link 
+            to='.'
+            onClick={navigateHandler}>
+            All
+          </Link>
         </li>
         <li className={style.logoLink}>
           <Link 
@@ -90,4 +96,4 @@ const StoreFilter = ({ flag, onBlurClick }) => {
   )
 }
 
-export default StoreFilter;
+export default Filter;
