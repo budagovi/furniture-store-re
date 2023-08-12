@@ -19,10 +19,12 @@ const StoreContent = ({sortID, flag}) => {
    window.scrollTo(0, 0);
   }, [currPage, currCategory])
 
-  //Manage array of products
   let products = useRouteLoaderData('root');
-  let i = Math.ceil(products.length / 12);
 
+  
+  //filter by category
+  products = products.filter(item => category ? item.category === category : item)
+  
   //sort 
   switch(sortID) {
     case 'default':
@@ -39,10 +41,11 @@ const StoreContent = ({sortID, flag}) => {
       break;
   }
 
-  //filter by category and take only 12 pieces for 1 page
-  products = products
-    .filter(item => category ? item.category === category : item)
-      .slice(12*(page-1), 12*page);
+  //determine how manu pages needed
+  let i = Math.ceil(products.length / 12);
+
+  //take only 12 pieces of products
+  products = products.slice(12*(page-1), 12*page);
   
   return (
     <>
