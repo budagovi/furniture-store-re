@@ -3,18 +3,18 @@ import StoreItem from './storePage/StoreItem'
 import style from './NewReleases.module.css';
 
 
-const NewReleases = () => {
+const NewReleases = ({title, index}) => {
 
   const products = useRouteLoaderData('root');
 
   return (
     <div className={style.wrapper}>
       <div className={style.actions}>
-        <h4>New releases</h4>
+        <h4>{title}</h4>
         <a className='lined yellowLine'>View All &rarr;</a>
       </div>
       <div className={style.grid}>
-        {products.slice(3, 7).map( product => 
+        {products.slice(index, index+4).map( product => 
           <StoreItem 
             img={product.id} 
             name={product.name} 

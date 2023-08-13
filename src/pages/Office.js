@@ -10,7 +10,7 @@ const OfficePage = () => {
       <OfficeHeader />
       <ContentHolder>
         <OfficeIntro />
-        <NewReleases />
+        <NewReleases title={'New Releases'} index={3}/>
         <OfficeArticles />
       </ContentHolder>
     </>

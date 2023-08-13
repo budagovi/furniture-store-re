@@ -10,7 +10,7 @@ const HomeOfficePage = () => {
       <Header />
       <ContentHolder>
         <HomeOfficeIntro/>
-        <NewReleases />
+        <NewReleases title={'New Releases'} index={3}/>
         <HomeArticles />
       </ContentHolder>
     </>

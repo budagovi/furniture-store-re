@@ -9,9 +9,10 @@
   width: var(--page-button-size);
   height: var(--page-button-size);
   font-size: var(--px16-font);
-  border: 1px solid #8b8698
+  border: 1px solid #8b8698;
 }
 
 .inActive {
   color: #8b8698;
+  background-color: #f4f4f4;
 }
