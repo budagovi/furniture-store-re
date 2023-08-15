@@ -5,7 +5,6 @@ import GalleryItem from './GalleryItem';
 const Gallery = () => {
 
   const photos = useLoaderData();
-  console.log(photos)
   return (
     <div className={style.wrapper}>
       {photos.map( photo => <GalleryItem img={photo} key={photo}/>)}

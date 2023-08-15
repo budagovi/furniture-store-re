@@ -1,9 +1,10 @@
 import style from './PageButtons.module.css';
 import PageButton from '../../UI/PageButton';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useParams } from 'react-router-dom';
 
 const PageButtons = ({pagesNum, currPage}) => {
-
+  const category = useParams().category;
+  
   let i = pagesNum;
   const pages = [];
   while(i--) pages.push(i+1);
@@ -27,7 +28,7 @@ const PageButtons = ({pagesNum, currPage}) => {
       {currPage < pagesNum && nextPage}
       {pages.map(page => 
         <NavLink 
-          to={page!==1 ? './' + page : '.'} 
+          to={page!==1 ? './' + page : category ? './'+category+'/'+page : '.'} 
           key={page}>
           <PageButton className={checkPage(page) ? style.active : undefined}>{page}</PageButton>
         </NavLink>

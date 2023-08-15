@@ -1,0 +1,50 @@
+.item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: var(--rem1-gap);
+  color: black;
+  background-color: #fff;
+  padding: var(--rem1dot5-gap) 0;
+  border-bottom: 1px solid #b8b8b8;
+}
+
+.item .textHolder{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.itemActions, .nameHolder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item .amountWrapper {
+  display: flex;
+  border: 1px solid #b7b7b7;
+}
+
+.amountWrapper button, .amountWrapper div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: clamp(18px, 2.7vw, 30px);
+  width: clamp(18px, 2.7vw, 30px);
+  font-weight: 700;
+  font-size: var(--px14-font);
+  color: #b9b9b9;
+  background-color: #fff;
+} 
+
+.item .amountWrapper div {
+  border-right: 1px solid #b7b7b7;
+  border-left: 1px solid #b7b7b7;
+  color: #505050;
+}

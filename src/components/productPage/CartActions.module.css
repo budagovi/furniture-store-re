@@ -3,3 +3,39 @@
   align-items: center;
   gap: var(--rem1dot5-gap);
 }
+
+.wrapper .amountWrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #b7b7b7;
+}
+
+.amountWrapper button, .amountWrapper div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: clamp(22px, 3vw, 35px);
+  width: clamp(22px, 3vw, 35px);
+  font-weight: 700;
+  font-size: var(--px16-font);
+  color: #b9b9b9;
+  background-color: #fff;
+} 
+
+.wrapper .amountWrapper div {
+  border-right: 1px solid #b7b7b7;
+  border-left: 1px solid #b7b7b7;
+  color: #505050;
+}
+
+
+.addToCartBtn {
+  border: none;
+  height: clamp(22px, 3vw, 35px);
+  padding-inline: var(--rem1dot5-gap);
+  font-weight: 700;
+  font-size: var(--px14-font);
+  background-color: var(--yellow);
+  border-radius: 4px;
+}

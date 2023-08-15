@@ -1,0 +1,88 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100dvh;
+  box-shadow: 0 4px 8px #717171;
+  z-index: 1;
+  display: none;
+  grid-template-columns: 1fr min(400px, 85%);
+  background-color: #0007;
+}
+
+.toggle {
+  display: grid;
+}
+
+.list {
+  width: 100%;
+  animation: reveal .4s forwards;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background-color: #b8b8b8;
+}
+
+.list header {
+  padding: var(--rem1dot5-gap);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: var(--px16-font);
+  color: #232323;
+}
+
+.list ul {
+  list-style: none;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  padding: var(--rem1dot5-gap);
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+.list ul li:nth-last-of-type(1) > div {
+  border: none;
+}
+
+.list ul::-webkit-scrollbar{
+  display: none;
+}
+
+.toggleList {
+  animation-name: revealReverse;
+}
+
+.closeBtn:hover {
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  padding: var(--rem1dot5-gap);
+  gap: var(--rem1-gap);
+  background-color: #fff;
+}
+
+@keyframes reveal {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes revealReverse {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}

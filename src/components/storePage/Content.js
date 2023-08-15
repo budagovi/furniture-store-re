@@ -16,11 +16,10 @@ const StoreContent = ({sortID, flag}) => {
   useEffect(() => {
    setPage(currPage ? currPage : 1) 
    setCategory(currCategory ? currCategory : '');
-   window.scrollTo(0, 0);
   }, [currPage, currCategory])
 
   let products = useRouteLoaderData('root');
-
+  console.log(products);
   
   //filter by category
   products = products.filter(item => category ? item.category === category : item)

@@ -1,14 +1,22 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useSearchParams } from "react-router-dom";
 import MainNavigation from "../components/mainNavigation/MainNavigation";
 import Footer from "../components/footer/Footer";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const RootPage = () => {
 
+  const {pathname} = useLocation();
+  const searchParams = useSearchParams();
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  }, [pathname, searchParams])
+
   return (
     <>
-    <MainNavigation />
-    <Outlet/>
-    <Footer />
+      <MainNavigation />
+      <Outlet/>
+      <Footer />
     </>
   )
 }

@@ -4,12 +4,17 @@ import NavSearchForm from './NavSearchForm';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import SideNavigation from './SideNavigation';
+import SideCart from './SideCart';
+import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector';
 
 const MainNavigation = () => {
 
   const { pathname } = useLocation();
   const [flag, setFlag] = useState();
   const [sideNav, setSideNav] = useState(false);
+  const [sideCart, setSideCart] = useState(false);
+
+  const cartAmount = useSelector(state => state.amount);
 
   useEffect(() => {
     if (document.getElementById('background'))
@@ -27,9 +32,14 @@ const MainNavigation = () => {
     setSideNav(prevState => !prevState);
   }
 
+  const sideCartHandler = (e) => {
+    setSideCart(prevState => !prevState);
+  }
+
   return (
     <nav className={classes}>
       <SideNavigation flag={sideNav} onBlurClick={sideMenuHandler}/>
+      <SideCart flag={sideCart} onBlurClick={sideCartHandler}/>
       <ul className={style.list}>
         <li className={style.logoLink}>
           <NavLink to='/furniture-store-react'>
@@ -59,8 +69,8 @@ const MainNavigation = () => {
           </li>
           <li>
             <div className={style.iconHolder}>
-              <CartIcon />
-              <div className={style.counter}>999</div>
+              <CartIcon onClick={sideCartHandler}/>
+              <div className={style.counter}>{cartAmount}</div>
             </div>
           </li>
           <li>

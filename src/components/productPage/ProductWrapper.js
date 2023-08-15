@@ -2,6 +2,7 @@ import { useRouteLoaderData, useSearchParams } from 'react-router-dom';
 import style from './ProductWrapper.module.css';
 import { useState, useEffect } from 'react';
 import CartActions from './CartActions';
+
 const ProductWrapper = () => {
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -27,14 +28,14 @@ const ProductWrapper = () => {
         <span>{product.category}</span>
         <h4>{product.name}</h4>
         <span> 
-          <span className={style.price}>${product.price}</span> & free Shipping
+          <span className={style.price}>${product.price.toFixed(2)}</span> & free Shipping
         </span>
         <span>
           Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet, 
           nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas 
           magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.
         </span>
-        <CartActions />
+        <CartActions item={product}/>
       </div>
     </div>
   )

@@ -1,4 +1,6 @@
-import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route, useLocation } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 
 
 //Page Elements
@@ -10,6 +12,7 @@ import ProductPage from "./pages/Product";
 import HomeOfficePage, { loader as homeOfficeArticlesloader } from "./pages/HomeOffice";
 import AboutPage, {loader as photoLoader} from "./pages/About";
 import ContactPage from "./pages/Contact";
+
 
 const router = createBrowserRouter([
   {
@@ -25,13 +28,15 @@ const router = createBrowserRouter([
       { path: 'about', element: <AboutPage />, loader:photoLoader },
       { path: 'contact', element: <ContactPage /> },
     ]
-  },
+  }, 
 ])
 
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
 
