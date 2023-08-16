@@ -17,14 +17,31 @@
   content: " *";
   color: rgb(166, 42, 42);
 }
-.form input, .form textarea {
-  border: 1px solid #c8c8c8;
+.valid {
   border-radius: 4px;
   line-height: 1.5rem;
   font-size: var(--px18-font);
   padding: clamp(0.1rem, 1vw, 0.3rem);
+  background-color: rgb(247, 249, 250);
+  border: 1px solid #c8c8c8;
+}
+
+.valid:focus {
+  outline: none;
+}
+
+.invalid {
+  background-color: #ffe6de;
+  border: 1px solid #ffa5a5;
+  box-shadow: 0 0 4px #ffa5a5;
 }
 
 .form button {
   align-self: flex-start;
+}
+
+.form button:disabled {
+  background-color: #d8d8d8;
+  color: #afafaf;
+  cursor: not-allowed;
 }

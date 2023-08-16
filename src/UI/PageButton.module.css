@@ -1,5 +1,5 @@
 :root {
-  --page-button-size: clamp(22px,3.8vw,40px)
+  --page-button-size: clamp(28px,3.8vw,40px)
 }
 
 .btn {

@@ -10,7 +10,7 @@ export const slice = createSlice({
   reducers: {
     addItem(state, action) {
       const newItem = {...action.payload.item, qty: action.payload.amount}
-      state.amount++;
+      state.amount+=newItem.qty;
       state.totalPrice += newItem.price*newItem.qty;
 
       //if item is already in list, index is greater than or equal to 0

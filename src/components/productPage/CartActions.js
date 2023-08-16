@@ -21,6 +21,7 @@ const CartActions = ({item}) => {
   }
 
   const addHandler = () => {
+    setAmount(1)
     dispatch(cartActions.addItem({item, amount}));
   }
 

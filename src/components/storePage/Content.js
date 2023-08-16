@@ -19,7 +19,6 @@ const StoreContent = ({sortID, flag}) => {
   }, [currPage, currCategory])
 
   let products = useRouteLoaderData('root');
-  console.log(products);
   
   //filter by category
   products = products.filter(item => category ? item.category === category : item)

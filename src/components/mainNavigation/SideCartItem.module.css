@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.closeBtn:hover {
+  cursor: pointer;
+}
+
 .item img {
   width: 100%;
 }
@@ -35,8 +39,8 @@
   align-items: center;
   justify-content: center;
   border: none;
-  height: clamp(18px, 2.7vw, 30px);
-  width: clamp(18px, 2.7vw, 30px);
+  height: clamp(24px, 2.7vw, 30px);
+  width: clamp(24px, 2.7vw, 30px);
   font-weight: 700;
   font-size: var(--px14-font);
   color: #b9b9b9;

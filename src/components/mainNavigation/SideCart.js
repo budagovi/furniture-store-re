@@ -12,7 +12,6 @@ const SideCart = ({ flag, onBlurClick }) => {
   const cartItems = useSelector(state => state.items);
   const total = useSelector(state => state.totalPrice)
 
-
   useEffect(() => {
     if (flag) {
       setWrapperClasses(`${style.wrapper} ${style.toggle}`);
@@ -28,6 +27,36 @@ const SideCart = ({ flag, onBlurClick }) => {
     }, 400);
   }
 
+
+  const cartContent = (
+    <>
+      <ul>
+        {cartItems.map(item =>
+          <li key={item.id}>
+            <SideCartItem item={item} />
+          </li>
+        )}
+      </ul>
+      <header>
+        <span>Subtotal:</span>
+        <div className={style.closingBtn}>${total.toFixed(2)}</div>
+      </header>
+      <div className={style.buttons}>
+        <Button>Checkout</Button>
+      </div>
+    </>
+  )
+
+  const emptyCartContent = (
+    <>
+      <ul className={style.emptyCart}>
+        <li>No products in the cart.</li>
+      </ul>
+      <div className={style.buttons}>
+        <Button>Start Shopping</Button>
+      </div>
+    </>
+  )
   return (
     <div className={wrapperClasses}>
       <div onClick={sideNavHandler}></div>
@@ -36,21 +65,7 @@ const SideCart = ({ flag, onBlurClick }) => {
           <span>Shopping Cart</span>
           <div className={style.closeBtn} onClick={sideNavHandler}>&#10005;</div>
         </header>
-        <ul>  
-          {cartItems.map(item =>
-            <li key={item.id}>
-              <SideCartItem item = {item}/>
-            </li> 
-          )}
-        </ul>
-        <header>
-          <span>Subtotal:</span>
-          <div className={style.closingBtn}>${total.toFixed(2)}</div>
-        </header>
-        <div className={style.buttons}>
-          <Button>View Cart</Button>
-          <Button>Checkout</Button>
-        </div>
+        {cartItems.length !== 0 ? cartContent : emptyCartContent}
       </div>
     </div>
   )
