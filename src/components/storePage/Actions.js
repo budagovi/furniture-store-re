@@ -1,6 +1,6 @@
 import style from './Actions.module.css';
-import { FilterIcon, Grid, GridHorizontal } from '../../assets/Icons';
-import { Link, useRouteLoaderData } from 'react-router-dom';
+import { FilterIcon} from '../../assets/Icons';
+import { Link, useParams } from 'react-router-dom';
 import Content from './Content';
 import { useState } from 'react';
 import Filter from './Filter';
@@ -10,17 +10,27 @@ import Sort from './Sort';
 const StoreActions = () => {
 
   const [sideNav, setSideNav] = useState(false);
-  const [category, setCategroy] = useState();
   const [sortID, setSortID] = useState('default');
   const [gridFlag, setGridFlag] = useState(false);
 
-  const storeSection = !category || category==='All' ? 'Shop' : category;
+  let category = useParams().category;
+  if(category) {
+    let section = ''
+    category = category.replace('-', ' ');
+    for(let i = 0; i<category.length; i++) {
+      if(i===0 || category[i-1]===' ') {
+        section += category[i].toUpperCase();
+      } else {
+        section += category[i];
+      }
+    }
+    category = section;
+  }
+
+  const storeSection = !category ? 'Shop' : category;
 
   const sideMenuHandler = (text) => {
     setSideNav(prevState => !prevState);
-    if(!text) return;
-    if(!text.target)
-      setCategroy(text);
   }
 
   const sortProductsHandler = (sortId) => {
