@@ -1,6 +1,7 @@
 import { useRouteLoaderData } from 'react-router-dom';
 import StoreItem from './storePage/StoreItem'
 import style from './NewReleases.module.css';
+import { Link } from 'react-router-dom';
 
 
 const NewReleases = ({title, index}) => {
@@ -11,7 +12,7 @@ const NewReleases = ({title, index}) => {
     <div className={style.wrapper}>
       <div className={style.actions}>
         <h4>{title}</h4>
-        <a className='lined yellowLine'>View All &rarr;</a>
+        <Link to='/furniture-store-react/store'className='lined yellowLine'>View All &rarr;</Link>
       </div>
       <div className={style.grid}>
         {products.slice(index, index+4).map( product => 

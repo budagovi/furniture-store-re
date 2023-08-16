@@ -3,6 +3,7 @@ import { useRouteLoaderData } from 'react-router-dom';
 import StoreItem from '../storePage/StoreItem';
 import StoreGridLayout from '../../Layout/StoreGrid';
 import Button from '../../UI/Button';
+import { Link } from 'react-router-dom';
 
 const NewArrivals = () => {
 
@@ -15,10 +16,12 @@ const NewArrivals = () => {
       <StoreGridLayout>
         {products.slice(0, 6).map(product => <StoreItem img={product.id} name={product.name} price={product.price} key={product.id} />)}
       </StoreGridLayout>
-      <Button>
-        <span>View All Products</span>
-        <span>&rarr;</span>
-      </Button>
+      <Link to='store'>
+        <Button>
+          <span>View All Products</span>
+          <span>&rarr;</span>
+        </Button>
+      </Link>
     </div>
   )
 }

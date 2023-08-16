@@ -9,7 +9,7 @@
 
 .wrapper h4{
   color: #8B8698;
-  max-width: 450px;
+  max-width: 650px;
   line-height: clamp(1rem, 3.6vw, 2.4rem);
   margin: var(--rem2-gap) 0 ;
 }
