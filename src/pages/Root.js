@@ -4,14 +4,29 @@ import Footer from "../components/footer/Footer";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
+const tabTitle = {
+  "/furniture-store-react": "Home - Office Furniture Store",
+  "/furniture-store-react/store": "Shop - Office Furniture Store",
+  "/furniture-store-react/about": "About Us - Office Furniture Store",
+  "/furniture-store-react/contact": "Contact Us - Office Furniture Store",
+  "/furniture-store-react/office-setups": "Office Setups - Office Furniture Store",
+  "/furniture-store-react/home-office-setups": "Home Office Setups - Office Furniture Store",
+  "/furniture-store-react/product": "Product - Office Furniture Store",
+}
+
 const RootPage = () => {
 
   const {pathname} = useLocation();
   const searchParams = useSearchParams();
   useEffect(() => {
       window.scrollTo(0, 0);
-  }, [pathname, searchParams])
 
+      for (let index in tabTitle){
+        if(index.includes(pathname))
+          document.title = tabTitle[pathname] || 'Furniture Store';
+      }
+  }, [pathname, searchParams])
+ 
   return (
     <>
       <MainNavigation />

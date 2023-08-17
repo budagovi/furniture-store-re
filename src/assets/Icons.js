@@ -105,7 +105,7 @@ export const FilterIcon = ({onClick}) => {
 
 export const Grid = ({onClick, color}) => {
   return (
-    <svg id='svg' onClick={onClick} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill={color ? color : "currentColor"} viewBox="0 0 16 16">
+    <svg id='svg' onClick={onClick} xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill={color ? color : "currentColor"} viewBox="0 0 16 16">
       <path id='path' d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"/>
     </svg>
   )
@@ -113,7 +113,7 @@ export const Grid = ({onClick, color}) => {
 
 export const GridHorizontal = ({onClick, color}) => {
   return (
-    <svg onClick={onClick} xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill={color ? color : "currentColor"} viewBox="0 0 16 16">
+    <svg onClick={onClick} xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill={color ? color : "currentColor"} viewBox="0 0 16 16">
       <path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm5-1v12h9a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H5zM4 2H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2V2z"/>
     </svg>
   )
@@ -190,6 +190,14 @@ export const ArrowDown = ({color}) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#444" viewBox="0 0 16 16">
       <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+    </svg>
+  )
+}
+
+export const CartBucket = () => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/>
     </svg>
   )
 }
