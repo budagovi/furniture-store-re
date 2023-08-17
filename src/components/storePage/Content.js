@@ -1,7 +1,6 @@
-import style from './Content.module.css';
 import StoreItem from './StoreItem';
 import StoreGridLayout from '../../Layout/StoreGrid';
-import { useParams, useRouteLoaderData } from 'react-router-dom';
+import { useParams, useRouteLoaderData, useActionData } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import PageButtons from './PageButtons';
 
@@ -19,7 +18,10 @@ const StoreContent = ({sortID, flag}) => {
   }, [currPage, currCategory])
 
   let products = useRouteLoaderData('root');
-  
+  const q = useActionData();
+
+  //filter by query search if exists
+    products = products.filter(item => q ? item.name.toLowerCase().includes(q) : item)
   //filter by category
   products = products.filter(item => category ? item.category === category : item)
   

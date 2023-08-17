@@ -5,3 +5,8 @@ const StorePage = () => {
 }
 
 export default StorePage;
+
+export const action = async ({request}) => {
+  const data = await request.formData();
+  return data.get('q');
+}
