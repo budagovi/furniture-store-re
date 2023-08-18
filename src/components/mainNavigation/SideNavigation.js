@@ -40,7 +40,7 @@ const SideNavigation = ({ flag, onBlurClick }) => {
           </NavLink>
         </li>
         <li>
-          <NavSearchForm />
+          <NavSearchForm onClick={navigateHandler}/>
         </li>
         <li className={style.linkText}>
           <NavLink

@@ -38,6 +38,11 @@ export const slice = createSlice({
     },
     deleteItem(state, action) {
       const id = action.payload;
+      const index = state.items.findIndex(item => item.id === id)
+      const item = state.items[index];
+      state.totalPrice -= item.price*item.qty;
+      state.amount -= item.qty;
+
       state.items = state.items.filter(item=>item.id !== id)
     }
   }

@@ -26,7 +26,7 @@ const SideCartItem = ({item}) => {
   }
 
   const deleteItemHandler = () => {
-    dispatch(cartActions.deleteItem(item.id))
+    dispatch(cartActions.deleteItem(id))
   }
   return (
     <div className={style.item}>

@@ -1,7 +1,33 @@
+.item {
+  position: relative;
+}
+
 .wrapper {
   width: 100%;
   text-align: start;
   display: grid;
+}
+
+.item svg {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  opacity: 0;
+  background-color: #a8a8a8;
+  color: #ededed;
+  box-sizing: content-box;
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+
+.item:hover svg {
+  opacity: 1;
+}
+
+.item svg:hover {
+  cursor: pointer;
+  background-color: #949494;
+  color: #ededed;
 }
 
 .wrapper img{

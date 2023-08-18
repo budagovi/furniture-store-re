@@ -52,6 +52,7 @@ const StoreContent = ({sortID, flag}) => {
       <StoreGridLayout flag={flag}>
           { products.length!==0 ? products.map(product => 
             <StoreItem 
+              item={product}
               img={product.id} 
               name={product.name} 
               price={product.price}
