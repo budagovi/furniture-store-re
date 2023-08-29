@@ -17,9 +17,7 @@ const NewReleases = ({title, index}) => {
       <div className={style.grid}>
         {products.slice(index, index+4).map( product => 
           <StoreItem 
-            img={product.id} 
-            name={product.name} 
-            price={product.price}
+            item = {product}
             key={product.id}
           />
         )}

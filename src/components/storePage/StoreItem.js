@@ -5,7 +5,9 @@ import {CartBucket} from '../../assets/Icons'
 import { useDispatch } from 'react-redux';
 import {actions as cartActions} from '../../store/CartSlice';
 
-const StoreItem = ({img, name, price, rating, flag, item}) => {
+const StoreItem = ({flag, item}) => {
+
+  const {id: img, name, price, popularity: rating} = item;
   const [image, setImage] = useState('');
   const dispatch = useDispatch();
 
@@ -26,33 +28,23 @@ const StoreItem = ({img, name, price, rating, flag, item}) => {
   if(flag) classes = style.grid;
 
   return (
-      <div className={style.item}>
-        {!flag && <CartBucket onClick={addItemHandler}/>}
-        <Link to={`/furniture-store-react/product?id=${img}`} className={classes}>
-          <img src={image} />
-          <div className={style.textHolder}>
-            <span>{name}</span>
-            <span>${price.toFixed(2)}</span>
-            {flag ? <>
-              <span>
-                Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet, 
-                nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas 
-                magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.
-              </span>
-              <span>rating: {rating}</span>
-            </>: null}
-          </div>
-        </Link>
-      </div>
-  )
-
-  return (
-    <div className={style.wrapper}>
-      <img src={image} />
-      <div className={style.textHolder}>
-        <span>{name}</span>
-        <span>${price.toFixed(2)}</span>
-      </div>
+    <div className={style.item}>
+      {!flag && <CartBucket onClick={addItemHandler}/>}
+      <Link to={`/furniture-store-react/product?id=${img}`} className={classes}>
+        <img src={image} />
+        <div className={style.textHolder}>
+          <span>{name}</span>
+          <span>${price.toFixed(2)}</span>
+          {flag ? <>
+            <span>
+              Auctor eros suspendisse tellus venenatis sodales purus non pellentesque amet, 
+              nunc sit eu, enim fringilla egestas pulvinar odio feugiat consectetur egestas 
+              magna pharetra cursus risus, lectus enim eget eu et lobortis faucibus.
+            </span>
+            <span>rating: {rating}</span>
+          </>: null}
+        </div>
+      </Link>
     </div>
   )
 }

@@ -53,11 +53,7 @@ const StoreContent = ({sortID, flag}) => {
           { products.length!==0 ? products.map(product => 
             <StoreItem 
               item={product}
-              img={product.id} 
-              name={product.name} 
-              price={product.price}
               key={product.id}
-              rating={product.popularity}
               flag={flag}
             /> 
           ) : <span>No Products Found</span>}

@@ -21,7 +21,6 @@ export const slice = createSlice({
       }
 
       state.items.push(newItem);
-      console.log(newItem)
     },
     removeItemPiece(state, action) {
       const newItem = {...action.payload.item}

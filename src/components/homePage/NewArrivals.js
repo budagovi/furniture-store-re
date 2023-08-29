@@ -14,7 +14,7 @@ const NewArrivals = () => {
       <span className='preTitle'>NEW ARRIVALS</span>
       <h3>Boost your productivity</h3>
       <StoreGridLayout>
-        {products.slice(0, 6).map(product => <StoreItem img={product.id} name={product.name} price={product.price} key={product.id} />)}
+        {products.slice(0, 6).map(product => <StoreItem item={product} key={product.id} />)}
       </StoreGridLayout>
       <Link to='store'>
         <Button>
