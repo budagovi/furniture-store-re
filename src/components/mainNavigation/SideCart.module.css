@@ -9,6 +9,7 @@
   display: none;
   grid-template-columns: 1fr min(400px, 85%);
   background-color: #0007;
+  z-index: 3;
 }
 
 .toggle {
@@ -24,6 +25,7 @@
   flex-direction: column;
   gap: 1px;
   background-color: #b8b8b8;
+  color: rgb(83, 83, 83);;
 }
 
 .list header {

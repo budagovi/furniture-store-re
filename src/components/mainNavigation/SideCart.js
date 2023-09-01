@@ -10,7 +10,7 @@ const SideCart = ({ flag, onBlurClick }) => {
   const [listClasses, setListClasses] = useState(style.list);
 
   const cartItems = useSelector(state => state.items);
-  const total = useSelector(state => state.totalPrice)
+  const total = useSelector(state => state.totalPrice);
 
   useEffect(() => {
     if (flag) {

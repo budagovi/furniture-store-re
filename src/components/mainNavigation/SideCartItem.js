@@ -1,11 +1,13 @@
 import style from './SideCartItem.module.css';
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {actions as cartActions} from '../../store/CartSlice';
 
 const SideCartItem = ({item}) => {
   const [image, setImage] = useState('');
   const {id, name, price, qty} = item;
+
+  const op = useSelector(state => state.operation);
 
   useEffect(() => {
     const importImage = async () => {
@@ -34,13 +36,13 @@ const SideCartItem = ({item}) => {
       <div className={style.textHolder}>
         <div className={style.nameHolder}>
           <span>{name}</span>
-          <div className={style.closeBtn} onClick={deleteItemHandler}>&#10005;</div>
+          <button disabled={op} className={style.closeBtn} onClick={deleteItemHandler}>&#10005;</button>
         </div>
         <div className={style.itemActions}>
           <div className={style.amountWrapper}>
-            <button onClick={decrementHandler}>-</button>
+            <button disabled={op} onClick={decrementHandler}>-</button>
             <div>{qty}</div>
-            <button onClick={incrementHandler}>+</button>
+            <button disabled={op} onClick={incrementHandler}>+</button>
           </div>
           <span className={style.price}>${(price*qty).toFixed(2)}</span>
         </div>

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import style from '../components/CartStateBar.module.css';
 
 export const slice = createSlice({
   name: 'cart',
@@ -6,9 +7,11 @@ export const slice = createSlice({
     amount: 0,
     totalPrice: 0,
     items: [],
+    classes: ''
   },
   reducers: {
     addItem(state, action) {
+      state.operation = 'adding';
       const newItem = {...action.payload.item, qty: action.payload.amount}
       state.amount+=newItem.qty;
       state.totalPrice += newItem.price*newItem.qty;
@@ -23,10 +26,12 @@ export const slice = createSlice({
       state.items.push(newItem);
     },
     removeItemPiece(state, action) {
+      state.operation = 'removing';
       const newItem = {...action.payload.item}
       state.amount--;
       state.totalPrice -= newItem.price;
       const index = state.items.findIndex(item => item.id === newItem.id)
+
 
       if(state.items[index].qty === 1) {
         state.items = state.items.filter(item=>item.id !== newItem.id)
@@ -36,6 +41,7 @@ export const slice = createSlice({
       state.items[index].qty--;
     },
     deleteItem(state, action) {
+      state.operation = 'removing';
       const id = action.payload;
       const index = state.items.findIndex(item => item.id === id)
       const item = state.items[index];
@@ -43,6 +49,9 @@ export const slice = createSlice({
       state.amount -= item.qty;
 
       state.items = state.items.filter(item=>item.id !== id)
+    },
+    emptyOperation(state) {
+      state.operation = '';
     }
   }
 })

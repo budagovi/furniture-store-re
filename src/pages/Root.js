@@ -3,6 +3,7 @@ import MainNavigation from "../components/mainNavigation/MainNavigation";
 import Footer from "../components/footer/Footer";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import CartStateBar from "../components/CartStateBar";
 
 const tabTitle = {
   "/furniture-store-react": "Home - Office Furniture Store",
@@ -29,6 +30,7 @@ const RootPage = () => {
  
   return (
     <>
+      <CartStateBar/>
       <MainNavigation />
       <Outlet/>
       <Footer />

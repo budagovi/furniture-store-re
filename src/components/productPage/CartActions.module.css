@@ -39,3 +39,7 @@
   background-color: var(--yellow);
   border-radius: 4px;
 }
+
+.addToCartBtn:disabled {
+  cursor: not-allowed;
+}

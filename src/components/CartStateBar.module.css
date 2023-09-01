@@ -1,0 +1,40 @@
+.wrapper {
+  color: white;
+  font-weight: 700;
+  font-size: var(--px14-font);
+  overflow: hidden;
+  height: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.adding {
+  animation: showing 900ms;
+  background-color: #22d481;
+}
+
+.removing {
+  animation: showing 900ms;
+  background-color: #d42e22;
+}
+
+@keyframes showing {
+  0% {
+    height: 0;
+  }
+  40% {
+    height: var(--px20-font);
+  }
+  70% {
+    height: var(--px20-font);
+  }
+  100% {
+    height: 0;
+  }
+}

@@ -2,7 +2,7 @@ import style from './StoreItem.module.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {CartBucket} from '../../assets/Icons'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {actions as cartActions} from '../../store/CartSlice';
 
 const StoreItem = ({flag, item}) => {
@@ -10,6 +10,8 @@ const StoreItem = ({flag, item}) => {
   const {id: img, name, price, popularity: rating} = item;
   const [image, setImage] = useState('');
   const dispatch = useDispatch();
+
+  const op = useSelector(state => state.operation);
 
   const addItemHandler = (e) => {
     e.stopPropagation();
@@ -29,7 +31,7 @@ const StoreItem = ({flag, item}) => {
 
   return (
     <div className={style.item}>
-      {!flag && <CartBucket onClick={addItemHandler}/>}
+      {!flag && <button disabled={op} onClick={addItemHandler}><CartBucket/></button>}
       <Link to={`/furniture-store-react/product?id=${img}`} className={classes}>
         <img src={image} />
         <div className={style.textHolder}>

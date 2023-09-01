@@ -8,6 +8,7 @@
   z-index: 1;
   display: none;
   grid-template-columns: 0px 1fr;
+  z-index: 3;
 }
 
 .toggle {
