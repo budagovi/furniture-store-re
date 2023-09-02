@@ -1,9 +1,10 @@
 import { Outlet, useSearchParams } from "react-router-dom";
 import MainNavigation from "../components/mainNavigation/MainNavigation";
 import Footer from "../components/footer/Footer";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigation } from "react-router-dom";
 import { useEffect } from "react";
 import CartStateBar from "../components/CartStateBar";
+import LoadingPage from "./Loading";
 
 const tabTitle = {
   "/furniture-store-react": "Home - Office Furniture Store",
@@ -19,6 +20,8 @@ const RootPage = () => {
 
   const {pathname} = useLocation();
   const searchParams = useSearchParams();
+  const navigation = useNavigation();
+
   useEffect(() => {
       window.scrollTo(0, 0);
 
@@ -27,12 +30,12 @@ const RootPage = () => {
           document.title = tabTitle[pathname] || 'Furniture Store';
       }
   }, [pathname, searchParams])
- 
+  
   return (
     <>
       <CartStateBar/>
       <MainNavigation />
-      <Outlet/>
+      {navigation.state==='loading' ? <LoadingPage/> :<Outlet/>}
       <Footer />
     </>
   )

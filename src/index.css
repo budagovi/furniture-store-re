@@ -84,3 +84,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/*Loading animation on loading state*/
+[id*= 'dot'] {
+  animation: appear 1s infinite;
+}
+#dot2 {
+  animation-delay: .3s;
+}
+#dot3 {
+  animation-delay: .6s;
+}
+
+@keyframes appear {
+  0% {
+    color: inherit;
+  }
+  100% {
+    color: transparent;
+  }
+}
