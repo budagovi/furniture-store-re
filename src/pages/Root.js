@@ -36,7 +36,7 @@ const RootPage = () => {
       <CartStateBar/>
       <MainNavigation />
       {navigation.state==='loading' ? <LoadingPage/> :<Outlet/>}
-      <Footer />
+      {navigation.state==='idle' && <Footer /> }
     </>
   )
 }
