@@ -1,11 +1,11 @@
 import style from './MainNavigation.module.css';
 import { Logo, CartIcon, PersonIcon, MenuIcon } from '../../assets/Icons';
 import NavSearchForm from './NavSearchForm';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import SideNavigation from './SideNavigation';
 import SideCart from './SideCart';
-import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 const MainNavigation = () => {
 
@@ -13,6 +13,7 @@ const MainNavigation = () => {
   const [flag, setFlag] = useState();
   const [sideNav, setSideNav] = useState(false);
   const [sideCart, setSideCart] = useState(false);
+  const navigation = useNavigation();
 
   const cartAmount = useSelector(state => state.amount);
 
@@ -24,6 +25,12 @@ const MainNavigation = () => {
 
     if(sideNav) setSideNav(false);
   }, [pathname])
+
+  useEffect(() => {
+    if (navigation.state === 'loading') {
+      setFlag(false)
+    }
+  }, [navigation.state])
 
   let classes = style.navWrapper;
   if (flag) classes = `${style.navWrapper} ${style.absolute}`
@@ -81,7 +88,6 @@ const MainNavigation = () => {
           </li>
         </ul>
       </div>
-
     </nav>
   )
 }

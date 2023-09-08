@@ -2,11 +2,26 @@
   position: relative;
 }
 
+.imgWrapper {
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.item:hover img {
+  scale: 1.1;
+}
+
 .wrapper {
   width: 100%;
   text-align: start;
   display: grid;
 }
+
 .item button {
   position: absolute;
   right: 1rem;
@@ -33,16 +48,13 @@
 .item:hover button {
   opacity: 1;
   transition: ease-in .1s;
+  z-index: 1;
 }
 
 .item svg:hover {
   cursor: pointer;
   background-color: #949494;
   color: #ededed;
-}
-
-.wrapper img{
-  width: 100%;
 }
 
 .textHolder {
@@ -55,13 +67,13 @@
   color: #a8a8a8;
 }
 
+.item:hover .textHolder {
+  color: #656565;
+}
+
 .textHolder span:nth-of-type(2n+1) {
   color: #000;
   font-size: var(--px16-font);
-}
-
-.grid img {
-  width: 100%;
 }
 
 .grid {

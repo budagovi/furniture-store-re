@@ -12,6 +12,11 @@ a {
   color: inherit;
 }
 
+::selection {
+  background-color: #fbd84b;
+  color: black;
+}
+
 :root {
   --main-padding-sides: 3rem;
   --yellow: #fbd84b;

@@ -33,7 +33,7 @@ const StoreItem = ({flag, item}) => {
     <div className={style.item}>
       {!flag && <button disabled={op} onClick={addItemHandler}><CartBucket/></button>}
       <Link to={`/furniture-store-react/product?id=${img}`} className={classes}>
-        <img src={image} />
+        <div className={style.imgWrapper}><img src={image} /></div>
         <div className={style.textHolder}>
           <span>{name}</span>
           <span>${price.toFixed(2)}</span>

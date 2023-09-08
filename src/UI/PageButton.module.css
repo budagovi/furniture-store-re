@@ -12,7 +12,17 @@
   border: 1px solid #8b8698;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .inActive {
   color: #8b8698;
   background-color: #f9f9f9;
+  transition: .2s ease;
+}
+
+.inActive:hover {
+  color: #565164;
+  background-color: #f0f0f0;
 }

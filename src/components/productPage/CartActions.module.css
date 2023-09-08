@@ -23,12 +23,17 @@
   background-color: #fff;
 } 
 
+.amountWrapper button:hover {
+  cursor: pointer;
+  background-color: #c1c1c1;
+  color: #ececec;
+}
+
 .wrapper .amountWrapper div {
   border-right: 1px solid #b7b7b7;
   border-left: 1px solid #b7b7b7;
   color: #505050;
 }
-
 
 .addToCartBtn {
   border: none;
@@ -38,6 +43,12 @@
   font-size: var(--px14-font);
   background-color: var(--yellow);
   border-radius: 4px;
+  transition: .2s ease;
+}
+
+.addToCartBtn:hover {
+  cursor: pointer;
+  background-color: #ffe680;
 }
 
 .addToCartBtn:disabled {

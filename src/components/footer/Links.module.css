@@ -34,8 +34,8 @@
   transition: .4s ease;
 }
 
-.icons svg:hover, .links span:hover {
-  color: #000;
+.icons svg:hover, .links span:hover, .links a:hover{
+  color: #121212;
   transition: .4s ease;
   cursor: default;
 }

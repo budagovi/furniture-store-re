@@ -44,6 +44,12 @@
   background-color: #fff;
 }
 
+.item .amountWrapper button:hover {
+  cursor: pointer;
+  background-color: #c1c1c1;
+  color: #ececec;
+}
+
 .item .amountWrapper:has(button:disabled) {
   color: #dbdbdb;
   background-color: #fff;
