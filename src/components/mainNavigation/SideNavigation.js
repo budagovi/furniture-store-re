@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Logo } from '../../assets/Icons';
 import NavSearchForm from './NavSearchForm';
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const SideNavigation = ({ flag, onBlurClick }) => {
 
@@ -28,52 +29,46 @@ const SideNavigation = ({ flag, onBlurClick }) => {
     setWrapperClasses(style.wrapper);
     onBlurClick();
   }
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if(flag)
+      navigateHandler();
+  }, [pathname])
 
   return (
     <div className={wrapperClasses}>
       <ul className={listClasses}>
         <li className={style.logoLink}>
-          <NavLink 
-            to='/furniture-store-react'
-            onClick={navigateHandler}>
+          <NavLink to='/furniture-store-react'>
             <Logo color='black'/>
           </NavLink>
         </li>
         <li>
-          <NavSearchForm onClick={navigateHandler}/>
+          <NavSearchForm />
         </li>
         <li className={style.linkText}>
-          <NavLink
-            to='/furniture-store-react/store'
-            onClick={navigateHandler}>
+          <NavLink to='/furniture-store-react/store'>
             Store
           </NavLink>
         </li>
         <li className={style.linkText}>
-          <NavLink 
-            to='/furniture-store-react/office-setups' 
-            onClick={navigateHandler}>
+          <NavLink to='/furniture-store-react/office-setups'>
             Office
           </NavLink>
         </li>
         <li className={style.linkText}>
-          <NavLink
-            to='/furniture-store-react/home-office-setups' 
-            onClick={navigateHandler}>
+          <NavLink to='/furniture-store-react/home-office-setups'>
             Home Office
           </NavLink>
         </li>
         <li className={style.linkText}>
-          <NavLink 
-            to='/furniture-store-react/about' 
-            onClick={navigateHandler}>
+          <NavLink to='/furniture-store-react/about'>
             About
           </NavLink>
         </li>
         <li className={style.linkText}>
-          <NavLink 
-            to='/furniture-store-react/contact'
-            onClick={navigateHandler}>
+          <NavLink to='/furniture-store-react/contact'>
             Contact
           </NavLink>
         </li>

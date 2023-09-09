@@ -2,7 +2,8 @@ import style from './SideCart.module.css';
 import { useEffect, useState } from 'react';
 import SideCartItem from './SideCartItem';
 import Button from '../../UI/Button';
-import { UseSelector, useSelector } from 'react-redux';
+import {useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
 const SideCart = ({ flag, onBlurClick }) => {
 
@@ -26,6 +27,13 @@ const SideCart = ({ flag, onBlurClick }) => {
       onBlurClick();
     }, 400);
   }
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if(flag)
+      sideNavHandler();
+  }, [pathname])
 
 
   const cartContent = (
