@@ -1,5 +1,5 @@
 import style from './Filter.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import NavSearchForm from '../mainNavigation/NavSearchForm';
 import { useEffect, useState } from 'react';
 
@@ -7,6 +7,12 @@ const Filter = ({ flag, onBlurClick }) => {
 
   const [wrapperClasses, setWrapperClasses] = useState(style.wrapper);
   const [listClasses, setListClasses] = useState(style.list);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if(flag)
+      sideNavHandler();
+  }, [pathname]);
 
   useEffect(() => {
     if (flag) {
@@ -25,7 +31,7 @@ const Filter = ({ flag, onBlurClick }) => {
 
   const navigateHandler = (e) => {
     setWrapperClasses(style.wrapper);
-    onBlurClick(e.target.textContent);
+    onBlurClick();
   }
 
   return (

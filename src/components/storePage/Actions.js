@@ -29,7 +29,7 @@ const StoreActions = () => {
 
   const storeSection = !category ? 'Shop' : category;
 
-  const sideMenuHandler = (text) => {
+  const sideMenuHandler = () => {
     setSideNav(prevState => !prevState);
   }
 
