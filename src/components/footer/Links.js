@@ -1,15 +1,31 @@
 import style from './Links.module.css';
 
 import { Logo, Facebook, Twitter, Instagram, YouTube } from '../../assets/Icons';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation, Link } from 'react-router-dom';
 
 const Links = () => {
+
+  const { pathname } = useLocation();
+
+  const scroll = (route) => {
+    if (pathname === route)
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+  }
+
   return (
     <div className={style.wrapper}>
       <div className={style.section}>
-        <Link to='/furniture-store-react'>
-          <Logo color='black'/>
-        </Link>
+        <div className={style.linkWrapper} onClick={() => scroll('/furniture-store-react')}>
+          <NavLink
+            to='/furniture-store-react'
+            className={({ isActive }) => isActive ? style.active : undefined}
+            end>
+            <Logo color='black' />
+          </NavLink>
+        </div>
         <div className={style.icons}>
           <Facebook />
           <Twitter />
@@ -20,8 +36,18 @@ const Links = () => {
       <div className={style.section}>
         <h5>About Us</h5>
         <div className={style.links}>
-          <Link to='/furniture-store-react/about'>About Us</Link>
-          <Link to='/furniture-store-react/contact'>Contact Us</Link>
+          <div className={style.linkWrapper} onClick={() => scroll('/furniture-store-react/about')}>
+            <NavLink
+              to='/furniture-store-react/about'
+              className={({ isActive }) => isActive ? style.active : undefined}>About Us
+            </NavLink>
+          </div>
+          <div className={style.linkWrapper} onClick={() => scroll('/furniture-store-react/contact')}>
+            <NavLink
+              to='/furniture-store-react/contact'
+              className={({ isActive }) => isActive ? style.active : undefined}>Contact Us
+            </NavLink>
+          </div>
           <span>Careers</span>
           <span>Customer Support</span>
         </div>

@@ -17,7 +17,7 @@
 }
 
 
-.section:nth-of-type(1) > a svg{
+.section:nth-of-type(1) div > a svg{
   width: clamp(130px, 20vw, 220px);
   height: clamp(20px, 3.4vw, 36px);
   display: flex;
@@ -34,16 +34,20 @@
   transition: .4s ease;
 }
 
-.icons svg:hover, .links span:hover, .links a:hover{
+.icons svg:hover, .links span:hover, .links a:hover, div.linkWrapper:hover{
   color: #121212;
   transition: .4s ease;
-  cursor: default;
+  cursor: pointer;
 }
 
 .links {
   gap: 0.3rem;
   flex-direction: column;
   font-size: var(--px16-font);
+}
+
+.active {
+  pointer-events: none;
 }
 
 .copyRight {

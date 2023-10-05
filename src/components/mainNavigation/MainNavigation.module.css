@@ -38,6 +38,14 @@
   list-style: none;
 }
 
+.list li:hover {
+  cursor: pointer;
+}
+
+.active {
+  pointer-events: none;
+}
+
 .menu {
   display: none;
 }
