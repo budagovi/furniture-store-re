@@ -56,16 +56,16 @@ const MainNavigation = () => {
             <Logo color={flag ? '' : 'black'} />
           </NavLink>
         </li>
-        <li>
+        <li className={style.linkText}>
           <NavLink to='/furniture-store-react/store'>Store</NavLink>
         </li>
-        <li>
+        <li className={style.linkText}>
           <NavLink 
             to='/furniture-store-react/office-setups' 
             className={({ isActive }) => isActive ? style.active : undefined}>Office
           </NavLink>
         </li>
-        <li>
+        <li className={style.linkText}>
           <NavLink 
             to='/furniture-store-react/home-office-setups'
             className={({ isActive }) => isActive ? style.active : undefined}>Home Office
@@ -74,13 +74,13 @@ const MainNavigation = () => {
       </ul>
       <div className={style.actions}>
         <ul className={style.list}>
-          <li>
+          <li className={style.linkText}>
             <NavLink 
               to='/furniture-store-react/about'
               className={({ isActive }) => isActive ? style.active : undefined}>About
             </NavLink>
           </li>
-          <li>
+          <li className={style.linkText}>
             <NavLink 
               to='/furniture-store-react/contact'
               className={({ isActive }) => isActive ? style.active : undefined}>Contact
