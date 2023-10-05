@@ -43,7 +43,7 @@
 }
 
 .active {
-  pointer-events: n;
+  pointer-events: none;
 }
 
 .menu {
