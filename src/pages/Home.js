@@ -24,7 +24,7 @@ const HomePage = () => {
 export default HomePage;
 
 export const loader = async () => {
-  const response = await fetch('https://furniture-store-191fb-default-rtdb.firebaseio.com/articles.json');
+  const response = await fetch('https://furniture-store-app---react-default-rtdb.firebaseio.com/articles.json');
 
   if(response.ok) {
     const data = await response.json();

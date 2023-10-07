@@ -22,7 +22,7 @@ const AboutPage = () => {
 export default AboutPage;
 
 export const loader = async () => {
-  const response = await fetch('https://furniture-store-191fb-default-rtdb.firebaseio.com/gallery.json');
+  const response = await fetch('https://furniture-store-app---react-default-rtdb.firebaseio.com/gallery.json');
 
   if(response.ok) {
     const data = await response.json();
