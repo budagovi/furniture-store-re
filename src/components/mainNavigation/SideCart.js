@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import SideCartItem from './SideCartItem';
 import Button from '../../UI/Button';
 import {useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const SideCart = ({ flag, onBlurClick }) => {
 
@@ -61,7 +61,7 @@ const SideCart = ({ flag, onBlurClick }) => {
         <li>No products in the cart.</li>
       </ul>
       <div className={style.buttons}>
-        <Button>Start Shopping</Button>
+      <Button><Link to='/furniture-store-react/store'>Start Shopping</Link></Button>
       </div>
     </>
   )
