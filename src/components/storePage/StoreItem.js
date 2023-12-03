@@ -1,5 +1,5 @@
 import style from './StoreItem.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {CartBucket} from '../../assets/Icons'
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,11 +18,13 @@ const StoreItem = ({flag, item}) => {
     dispatch(cartActions.addItem({item, amount: 1}))
   }
 
-  const importImage = async () => {
-    const response = await import(`../../assets/products/${img}.jpg`);
-    setImage(response.default);
-  }
-  importImage()
+  useEffect(() => {
+    const importImage = async () => {
+      const response = await import(`../../assets/products/${img}.jpg`);
+      setImage(response.default);
+    }
+    importImage()
+  })
   
   let classes = style.wrapper;
   if(flag) classes = style.grid;
